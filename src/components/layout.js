@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import { createGlobalStyle } from 'styled-components';
 
 import Header from "./header";
+import Footer from "./footer";
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -55,6 +56,7 @@ const Layout = ({ children }) => {
 
       <Header />
       {children}
+      <Footer />
     </>
   );
 }
