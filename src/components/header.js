@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 import Navigation from './nav';
 
@@ -19,15 +20,18 @@ const Heading  = styled.div`
   }
 `;
 
-const HeadingTitle = styled.h1`
+const HeadingLink = styled(Link)`
   color: #FFF;
   text-align: center;
+  text-decoration: none;
 `;
 
 const Header = () => (
   <HeaderStyles>
     <Heading>
-      <HeadingTitle>Gatsby Hotel</HeadingTitle>
+      <HeadingLink to="/">
+        <h1>Gatsby Hotel</h1>
+      </HeadingLink>
       <Navigation />
     </Heading>
   </HeaderStyles>
