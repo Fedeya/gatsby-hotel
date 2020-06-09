@@ -35,7 +35,7 @@ const AboutContent = () => {
         title
         content
         image {
-          fluid {
+          fluid(maxWidth: 1200) {
             ...GatsbyDatoCmsFluid
           }
         }

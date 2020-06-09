@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
 import styled from 'styled-components';
 
-const Title = styled.h3`
+const Title = styled.h2`
   font-size: 4rem;
   text-align: center;
   margin-top: 4rem;
@@ -34,7 +34,7 @@ const HomeContent = () => {
         title
         content
         image {
-          fluid {
+          fluid(maxWidth: 1200) {
             ...GatsbyDatoCmsFluid
           }
         }
