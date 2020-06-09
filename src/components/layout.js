@@ -7,6 +7,11 @@ import Header from "./header";
 const GlobalStyle = createGlobalStyle`
   html {
     font-size: 62.5%;
+    box-sizing: border-box;
+  }
+
+  *, *:before, *:after {
+    box-sizing: border-box;
   }
 
   body {
