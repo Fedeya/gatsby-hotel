@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Navigation from './nav';
 
 const HeaderStyles = styled.header`
-  background-color: #333;
+  background-color: #222;
   padding: 1rem;
 `;
 
@@ -27,7 +27,7 @@ const HeadingTitle = styled.h1`
 const Header = () => (
   <HeaderStyles>
     <Heading>
-      <HeadingTitle>Hotel Gatsby</HeadingTitle>
+      <HeadingTitle>Gatsby Hotel</HeadingTitle>
       <Navigation />
     </Heading>
   </HeaderStyles>
