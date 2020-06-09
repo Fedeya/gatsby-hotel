@@ -5,6 +5,8 @@ import { createGlobalStyle } from 'styled-components';
 import Header from "./header";
 import Footer from "./footer";
 
+import useSeo from '../hooks/use-seo';
+
 const GlobalStyle = createGlobalStyle`
   html {
     font-size: 62.5%;
@@ -44,10 +46,15 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const Layout = ({ children }) => {
+  
+  const seo = useSeo();
+  const { siteName, fallbackSeo } = seo;
+  
   return (
     <>
       <Helmet>
-        <title>Gatsby Hotel</title>
+        <title>{ siteName }</title>
+        <meta name="description" content={fallbackSeo.description} />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|Roboto:400,700&display=swap"/>
       </Helmet>
@@ -56,7 +63,7 @@ const Layout = ({ children }) => {
 
       <Header />
       {children}
-      <Footer />
+      <Footer title={siteName} />
     </>
   );
 }

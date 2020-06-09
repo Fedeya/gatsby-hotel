@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from 'styled-components';
 
-const Footer = () => {
+const Footer = ({ title }) => {
   const year = new Date().getFullYear()
   
   return (
@@ -15,7 +15,7 @@ const Footer = () => {
           padding: 1rem;
         `}
       >
-        Gatsby Hotel. All rights reserved {year} &copy;
+        {title}. All rights reserved {year} &copy;
       </p>
     </footer>
   );  
