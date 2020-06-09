@@ -1,4 +1,4 @@
-import { grapqhl, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 
 const useSeo = () => {
   const { site } = useStaticQuery(graphql`
