@@ -9,12 +9,23 @@ const HeaderStyles = styled.header`
 const Heading  = styled.div`
   max-width: 1200px;
   margin: 0 auto;
+
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+`;
+
+const HeadingTitle = styled.h1`
+  color: #FFF;
+  text-align: center;
 `;
 
 const Header = () => (
   <HeaderStyles>
     <Heading>
-      <h1>Hotel Gatsby</h1>
+      <HeadingTitle>Hotel Gatsby</HeadingTitle>
     </Heading>
   </HeaderStyles>
 );
