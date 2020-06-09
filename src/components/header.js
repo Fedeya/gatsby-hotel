@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Navigation from './nav';
+
 const HeaderStyles = styled.header`
   background-color: #333;
   padding: 1rem;
@@ -26,6 +28,7 @@ const Header = () => (
   <HeaderStyles>
     <Heading>
       <HeadingTitle>Hotel Gatsby</HeadingTitle>
+      <Navigation />
     </Heading>
   </HeaderStyles>
 );
